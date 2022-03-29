@@ -6,7 +6,13 @@
 
 :root{
     --color-primario: black;
+    --color-secundario: #777;
     --color-letra: white;
+}
+
+body{
+    background-color: var(--color-secundario);
+    color: var(--color-letra);
 }
 
 .header{
@@ -52,10 +58,98 @@
     border: none;
     font-size: 30px;
     padding: 0 20px;
-    /* line-height: 60px; */
     display: none;
     cursor: pointer;
 }
+
+/* .main{
+    display: flex;
+    width: 100%;
+} */
+
+#inicio, #proyecto, #habilidad, #contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.inicio__h1{
+    letter-spacing: 1.2px;
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.inicio__p, .proyecto__p, .skill__p{
+    margin-bottom: 20px;
+}
+
+.inicio__h2, .proyecto__h2, .habilidad__h2, .formulario__h2{
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.proyecto{
+
+}
+
+.ejemplo__h4{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.ejemplo__img{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.skill__img{
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.habilidades{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#formulario-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#formulario-container > input {
+    padding: 8px;
+    font-size: 18px;
+}
+
+#formulario-container > textarea {
+    resize: vertical;
+    max-height: 180px;
+    font-size: 18px;
+}
+
+#formulario-container > button {
+    padding: 12px;
+    width: 75px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    margin-top: 10px;
+}
+
+
+
+
+
 
 @media (max-width: 768px) {
     .nav__ul{

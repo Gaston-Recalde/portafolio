@@ -11,15 +11,15 @@
 <body>
     <header class="header">
         <nav class="nav">
-            <a class="nav__a" href="#">Portafolio</a>
+            <a class="nav__a" href="#inicio">Portafolio</a>
             <button class="nav__toggle" aria-label="Abrir menú">
                 <i class="fa-solid fa-bars"></i>
             </button>
             <ul class="nav__ul">
-                <li class="ul__li">Inicio</li>
-                <li class="ul__li">Proyectos</li>
-                <li class="ul__li">Habilidades</li>
-                <li class="ul__li">Contacto</li>
+                <li class="ul__li"><a href="#inicio">Inicio</a></li>
+                <li class="ul__li"><a href="#proyecto">Proyectos</a></li>
+                <li class="ul__li"><a href="#habilidad">Habilidades</a></li>
+                <li class="ul__li"><a href="#form">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -105,22 +105,34 @@
             </div>
         </section>
 
-        <section id="contacto">
-            <h2 class="formulario__h2">Contacto</h2>
+        <!-- <section id="contacto"> -->
+
+            <form id="form">
+                <div class="form__container">
+                    <h2 class="form__h2">Contáctame</h2>
+                    <input type="text" class="form__input" placeholder="Nombre:">
+                    <input type="email" class="form__input" placeholder="Email:">
+                    <textarea class="form__input form__input--message" placeholder="Mensaje:"></textarea>
+
+                    <input type="submit" value="Enviar" class="form__button">
+                </div>
+            </form>
+
+
+
+
+
+            <!-- <h2 class="formulario__h2">Contacto</h2>
             <div id="formulario">
                 <form id="formulario-container">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre"><br>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email"><br>
-                    <label for="asunto">Asunto</label>
-                    <input type="text" id="asunto" name="asunto"><br>
-                    <label for="mensaje">Mensaje</label>
-                    <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea><br>
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre:"><br>
+                    <input type="email" id="email" name="email" placeholder="Email:"><br>
+                    <textarea name="mensaje" id="mensaje" placeholder="Mensaje:" cols="30" rows="10"></textarea><br>
                     <button type="submit" name="enviar">Enviar</button>
                 </form>
-            </div>
-        </section>
+            </div> -->
+
+        <!-- </section> -->
 
     </main>
 

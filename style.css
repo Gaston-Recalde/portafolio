@@ -1,18 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 :root{
     --color-primario: black;
     --color-secundario: #777;
     --color-letra: white;
+    --font-monserrat: 'Montserrat'
 }
 
 body{
     background-color: var(--color-secundario);
     color: var(--color-letra);
+    font-family: var(--font-monserrat), sans-serif;
+    display: flex;
+    /* padding-top: 100px; */
 }
 
 .header{
@@ -52,6 +59,16 @@ body{
     list-style: none;
 }
 
+.ul__li > a:hover{
+    transform: scale(1.4, 1.4);
+}
+
+.ul__li > a {
+    color: var(--color-letra);
+    text-decoration: none;
+    list-style: none;
+}
+
 .nav__toggle{
     color: var(--color-letra);
     background: none;
@@ -67,39 +84,38 @@ body{
     width: 100%;
 } */
 
-#inicio, #proyecto, #habilidad, #contacto{
+#inicio, #proyecto, #habilidad{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 80%;
     margin: 0 auto;
-    margin-top: 100px;
+    padding-top: 100px;
     text-align: center;
 }
 
 .inicio__h1{
     letter-spacing: 1.2px;
     font-weight: 700;
-    font-size: 40px;
+    font-size: 34px;
     margin-bottom: 10px;
 }
 
 .inicio__p, .proyecto__p, .skill__p{
     margin-bottom: 20px;
+    font-weight: 400;
 }
 
-.inicio__h2, .proyecto__h2, .habilidad__h2, .formulario__h2{
+.inicio__h2, .proyecto__h2, .habilidad__h2, .form__h2{
     font-size: 28px;
     margin-bottom: 15px;
-}
-
-.proyecto{
-
+    font-weight: 500;
 }
 
 .ejemplo__h4{
     font-size: 24px;
     margin-bottom: 10px;
+    font-weight: 500;
 }
 
 .ejemplo__img{
@@ -118,10 +134,62 @@ body{
     justify-content: center;
 }
 
-#formulario-container {
+#form{
+    background-color: var(--color-primario);
+    width: 90%;
+    max-width: 1024px;
+    border-radius: 16px;
+    padding: 48px 24px;
+    margin: auto;
+}
+
+.form__container{
+    width: 100%;
+    display: grid;
+    gap: 16px;
+    grid-auto-columns: 100%;
+}
+
+.form__h2{
+    text-align: center;
+}
+
+.form__input{
+    font-family: inherit;
+    font-size: 16px;
+    padding: 12px 16px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.form__input--message{
+    resize: none;
+    padding: 22px 16px;
+    margin-bottom: 8px;
+}
+
+.form__button{
+    font-family: inherit;
+    border: none;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 12px 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/* #formulario-container {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    text-align: start;
 }
 
 #formulario-container > input {
@@ -133,18 +201,25 @@ body{
     resize: vertical;
     max-height: 180px;
     font-size: 18px;
+    padding: 8px;
 }
 
 #formulario-container > button {
     padding: 12px;
-    width: 75px;
+    width: 100%;
     text-align: center;
     margin-bottom: 20px;
+    border-radius: 3px;
+    border: none;
 }
 
 input, textarea {
     margin-top: 10px;
-}
+    border-radius: 3px;
+    border: none;
+} */
+
+
 
 
 

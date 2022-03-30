@@ -117,6 +117,7 @@ nav > ul > li > a:hover{
     display: flex;
     flex-direction: column-reverse;
     margin-bottom: 50px;
+    max-width: 1024px;
 }
 
 a{
@@ -245,5 +246,20 @@ a{
 }
 
 @media (min-width:1024px) {
-    
+    .inicio__h1{
+        margin: 125px 0;
+        font-size: 56px;
+    }
+
+    .inicio__h2, .proyecto__h2, .habilidad__h2, .form__h2{
+        font-size: 36px;
+    }
+
+    .proyecto__p--2{
+        margin-bottom: 100px;
+    }
+
+    .ejemplo{
+        margin-bottom: 100px;
+    }
 }

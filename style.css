@@ -9,7 +9,8 @@
 
 :root{
     --color-primario: black;
-    --color-secundario: #777;
+    --color-secundario: rgb(27, 27, 27);
+    --color-terciario: rgb(82, 82, 82);
     --color-letra: white;
     --font-monserrat: 'Montserrat'
 }
@@ -19,7 +20,7 @@ body{
     color: var(--color-letra);
     font-family: var(--font-monserrat), sans-serif;
     display: flex;
-    /* padding-top: 100px; */
+    flex-direction: column;
 }
 
 .header{
@@ -59,14 +60,19 @@ body{
     list-style: none;
 }
 
-.ul__li > a:hover{
-    transform: scale(1.4, 1.4);
-}
-
 .ul__li > a {
     color: var(--color-letra);
     text-decoration: none;
     list-style: none;
+}
+
+nav > ul > li:hover{
+    transform: scale(1.2, 1.2);
+}
+
+nav > ul > li > a:hover{
+    
+    color: var(--color-terciario);
 }
 
 .nav__toggle{
@@ -78,11 +84,6 @@ body{
     display: none;
     cursor: pointer;
 }
-
-/* .main{
-    display: flex;
-    width: 100%;
-} */
 
 #inicio, #proyecto, #habilidad{
     display: flex;
@@ -98,23 +99,34 @@ body{
     letter-spacing: 1.2px;
     font-weight: 700;
     font-size: 34px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .inicio__p, .proyecto__p, .skill__p{
-    margin-bottom: 20px;
+    margin-bottom: 35px;
     font-weight: 400;
 }
 
 .inicio__h2, .proyecto__h2, .habilidad__h2, .form__h2{
     font-size: 28px;
-    margin-bottom: 15px;
+    margin-bottom: 50px;
     font-weight: 500;
+}
+
+.ejemplo{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 50px;
+}
+
+a{
+    text-decoration: none;
+    color: aqua; /* Cambiar el color */
 }
 
 .ejemplo__h4{
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     font-weight: 500;
 }
 
@@ -135,8 +147,6 @@ body{
 }
 
 #form{
-    background-color: var(--color-primario);
-    width: 90%;
     max-width: 1024px;
     border-radius: 16px;
     padding: 48px 24px;
@@ -179,52 +189,9 @@ body{
     cursor: pointer;
 }
 
+/* .footer{
 
-
-
-
-
-
-/* #formulario-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: start;
-}
-
-#formulario-container > input {
-    padding: 8px;
-    font-size: 18px;
-}
-
-#formulario-container > textarea {
-    resize: vertical;
-    max-height: 180px;
-    font-size: 18px;
-    padding: 8px;
-}
-
-#formulario-container > button {
-    padding: 12px;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 20px;
-    border-radius: 3px;
-    border: none;
-}
-
-input, textarea {
-    margin-top: 10px;
-    border-radius: 3px;
-    border: none;
 } */
-
-
-
-
-
-
-
 
 @media (max-width: 768px) {
     .nav__ul{
@@ -235,7 +202,6 @@ input, textarea {
         left: 100%;
         top: 60px;
         width: 100%;
-        /* padding: 20px 0; */
         height: calc(100% - 60px);
         overflow-y: auto;
         transition: left 0.5s;
@@ -252,4 +218,32 @@ input, textarea {
     .nav__toggle:focus:not(:focus-visible){
         outline: none;
     }
+
+}
+
+@media (min-width: 768px){
+    .ejemplo{
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        text-align: initial;
+        column-gap: 25px;
+    }
+
+    .ejemplo > a{
+        width: 60%;
+    }
+
+    .ejemplo__img{
+        margin-bottom: 0;
+    }
+
+    .ejemplo__info{
+        width: 40%;
+        text-align: center;
+    }
+}
+
+@media (min-width:1024px) {
+    
 }

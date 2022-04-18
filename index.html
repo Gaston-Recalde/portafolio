@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gastón Recalde</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/5e87a118c2.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="header">
@@ -44,11 +43,11 @@
             </p>
             <div class="ejemplos">
                 <div class="ejemplo">
-                    <a href="https://friendly-payne-4da7e4.netlify.app/">
-                        <img src="assets/Webs/friendly-payne-4da7e4.netlify.app_.png" alt="" class="ejemplo__img">
+                    <a href="https://inspiring-druid-2109b7.netlify.app/">
+                        <img src="assets/Webs/inspiring-druid-2109b7.netlify.app_.png" alt="" class="ejemplo__img">
                     </a>
                     <div class="ejemplo__info">
-                        <h4 class="ejemplo__h4">3-columns</h4>
+                        <h4 class="ejemplo__h4">Fylo landing page dark theme</h4>
                         <p class="ejemplo__p"></p>
                     </div>
                 </div>
@@ -120,14 +119,28 @@
             </div>
         </section>
 
-        <form id="form">
+        <form id="form">   <!-- action="https://formspree.io/f/xdobwgdo" method="POST" -->
             <div class="form__container">
                 <h2 class="form__h2">Contáctame</h2>
-                <input type="text" class="form__input" placeholder="Nombre:">
-                <input type="email" class="form__input" placeholder="Email:">
-                <textarea class="form__input form__input--message" placeholder="Mensaje:" cols="30" rows="10"></textarea>
-
-                <input type="submit" value="Enviar" class="form__button">
+                <div class="form-control">
+                    <label for="username">Nombre</label>
+                    <input type="text" id="username" class="form__input" name="name" />
+                    <small>Error message</small>
+                </div>
+        
+                <div class="form-control">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="form__input" name="email" >
+                    <small>Error message</small>
+                </div>
+        
+                <div class="form-control">
+                    <label for="message">Mensaje</label>
+                    <textarea type="textarea" id="message" class="form__input form__input--message" name="message" cols="30" rows="10" ></textarea>
+                    <small>Error message</small>
+                </div>
+        
+                <button id="button" type="submit" value="Enviar" class="form__button">Enviar</button>
             </div>
         </form>
 
@@ -136,6 +149,9 @@
     <footer class="footer">
         <p>Diseñado y desarrollado por Gastón Recalde</p>
     </footer>
+    <script src="https://kit.fontawesome.com/5e87a118c2.js" crossorigin="anonymous"></script>
     <script src="app.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
+
